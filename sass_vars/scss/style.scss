@@ -1,0 +1,29 @@
+// 주석
+// 오 Sass 주석은 컴파일은 안됨
+/* 이렇게하면 주석됨 */
+
+
+$var1: 2px dashed black;
+$var2: 1px solid red;
+$var3: gray;
+$var4: yellow;
+$my-var1: background;
+$my-var2: '.box2';
+$my-var3: 24;
+
+.box1 {
+    border: $var1;
+    background: $var3;
+}
+
+#{$my-var2} {
+    border: $var2;
+    #{$my-var1}: $var4;
+    font-size: #{$my-var3}px;
+}
+
+@for $i from 1 through 3 {
+    .box#{$i} {
+        font-size: #{16 * $i}px;
+    }
+}
