@@ -1,0 +1,7 @@
+@use 'var';
+@use 'var2';
+
+h1 {
+    color: var.$primary-color;
+    font-size: var2.$default-size;
+}
