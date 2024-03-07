@@ -1,0 +1,21 @@
+@use './vars';
+
+$var1: #ff0000;
+$s: 10px;
+
+.box {
+    width: #{$s * 10};
+    height: 100px;
+    border: 1px solid blue;
+    background: vars.$color-primary;
+}
+
+.box + .box {
+    $spacer20px: vars.$spacer * 4; // 지역변수
+    margin-top: $spacer20px;
+    // margin-top: vars.$spacer * 2;
+}
+
+#box2 {
+    background: $var1;
+}
